@@ -99,6 +99,8 @@ internal static partial class Interop
         internal static extern int DevicePowerRequestLock(PowerLock type, int timeout_ms);
         [DllImport(Libraries.Device, EntryPoint = "device_power_release_lock", CallingConvention = CallingConvention.Cdecl)]
         internal static extern int DevicePowerReleaseLock(PowerLock type);
+        [DllImport(Libraries.Device, EntryPoint = "device_power_poweroff", CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int DevicePowerPowerOff();
 
         //IR
         [DllImport(Libraries.Device, EntryPoint = "device_ir_is_available", CallingConvention = CallingConvention.Cdecl)]
